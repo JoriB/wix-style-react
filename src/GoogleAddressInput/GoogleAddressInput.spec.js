@@ -230,7 +230,6 @@ describe('GoogleAddressInput', () => {
 
       await eventually(() => {
         component.update();
-        console.warn(component.find('InputWithOptions').props().options);
         expect(component.find('InputWithOptions').props().options).toEqual([
           {
             id: 0,
