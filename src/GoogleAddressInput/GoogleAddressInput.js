@@ -257,7 +257,7 @@ class GoogleAddressInput extends React.Component {
 
         const request = {
           types,
-          components: 'country:' + countryCode,
+          componentRestrictions: { country: countryCode },
           input: valuePrefix + value,
         };
 

@@ -230,14 +230,17 @@ describe('GoogleAddressInput', () => {
 
       await eventually(() => {
         component.update();
+        console.warn(component.find('InputWithOptions').props().options);
         expect(component.find('InputWithOptions').props().options).toEqual([
           {
             id: 0,
-            value: '{"components":"country:XX","input":"Hatomer 49"} - 1',
+            value:
+              '{"componentRestrictions":{"country":"XX"},"input":"Hatomer 49"} - 1',
           },
           {
             id: 1,
-            value: '{"components":"country:XX","input":"Hatomer 49"} - 2',
+            value:
+              '{"componentRestrictions":{"country":"XX"},"input":"Hatomer 49"} - 2',
           },
         ]);
       });
